@@ -7,6 +7,7 @@ var wall_jump_velo = -200.0
 var gravity = 400.0
 var jumping = false
 var movable = true
+var bullet = preload("res://Scenes/test_bullet.tscn")
 
 func _physics_process(delta: float) -> void:
 	if movable:
@@ -20,6 +21,8 @@ func _physics_process(delta: float) -> void:
 		else:
 			jumping = false
 		var direction := Input.get_axis("Left", "Right")
+		if direction == -1.0 or direction == 1.0:
+			PlayerInfo.direction = direction
 		# Handle jump.a
 		if Input.is_action_just_pressed("Jump") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
@@ -40,3 +43,10 @@ func _physics_process(delta: float) -> void:
 			if !jumping:
 				velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("Special"):
+		var new_bul = bullet.instantiate()
+		add_child(new_bul)
+		new_bul.velo = 5 * PlayerInfo.direction
+		
