@@ -9,6 +9,7 @@ var jumping = false
 var movable = true
 var bullet = preload("res://Scenes/test_bullet.tscn")
 
+
 func _physics_process(delta: float) -> void:
 	if movable:
 		
@@ -18,6 +19,8 @@ func _physics_process(delta: float) -> void:
 				velocity.y += gravity/2 *delta
 			else:
 				velocity.y+=gravity*delta
+			if velocity.y > 400.0:
+				velocity.y = 400
 		else:
 			jumping = false
 		var direction := Input.get_axis("Left", "Right")
@@ -45,8 +48,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("Special"):
-		var new_bul = bullet.instantiate()
-		add_child(new_bul)
-		new_bul.velo = 5 * PlayerInfo.direction
+	if PlayerInfo.has_gun == true:
+		if Input.is_action_just_pressed("Special"):
+			var new_bul = bullet.instantiate()
+			new_bul.global_position = global_position
+			add_child(new_bul)
 		

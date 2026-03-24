@@ -4,6 +4,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f60y1"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0iea"]
+size = Vector2(58, 58)
+
 [node name="Player" type="CharacterBody2D" unique_id=1316389754]
 script = ExtResource("1_v0iea")
 
@@ -15,5 +18,13 @@ offset_bottom = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=372644475]
 shape = SubResource("RectangleShape2D_f60y1")
+debug_color = Color(0.9941686, 0, 0.23354813, 0.41960785)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=529192919]
+
+[node name="Interact Range" type="Area2D" parent="." unique_id=1513343908]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact Range" unique_id=865218095]
+shape = SubResource("RectangleShape2D_v0iea")

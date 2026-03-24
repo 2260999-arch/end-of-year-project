@@ -3,12 +3,13 @@
 [ext_resource type="Script" uid="uid://1mtokiymc7pf" path="res://Scripts/test_bullet.gd" id="1_ydawc"]
 
 [node name="TestBullet" type="Node2D" unique_id=1778511475]
+top_level = true
 script = ExtResource("1_ydawc")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=705365092]
+polygon = PackedVector2Array(1, -1, 2, 0, 1, 1, -2, 1, -2, -1)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2057660137]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=877132094]
 polygon = PackedVector2Array(-2, -1, 1, -1, 2, 0, 1, 1, -2, 1)
-
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=705365092]
-polygon = PackedVector2Array(1, -1, 2, 0, 1, 1, -2, 1, -2, -1)

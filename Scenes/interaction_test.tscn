@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://ckj8daacqlkum"]
+
+[ext_resource type="Script" uid="uid://c0s0wanqe0pk6" path="res://Scripts/Interaction_Test.gd" id="1_jaox4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sa23m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jaox4"]
+
+[node name="Interaction Test" type="Node2D" unique_id=364518175]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=808590347]
+offset_left = -9.999998
+offset_top = -10.0
+offset_right = 30.000002
+offset_bottom = 30.0
+scale = Vector2(0.50010294, 0.49887833)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1280003777]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_jaox4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=250571950]
+shape = SubResource("RectangleShape2D_sa23m")
+
+[node name="Interaction Text" type="Label" parent="." unique_id=1529053957]
+visible = false
+offset_left = -41.0
+offset_top = -59.0
+offset_right = 44.0
+offset_bottom = -10.0
+text = "Press \"E\"
+To Interact"
+label_settings = SubResource("LabelSettings_jaox4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
+[connection signal="area_exited" from="Area2D" to="Area2D" method="_on_area_exited"]
