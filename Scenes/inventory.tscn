@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://c60b1ckq6ate"]
+
+[node name="Inventory" type="Control" unique_id=97410509]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=603116587]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 75.0
+offset_right = 888.0
+offset_bottom = 475.0
+color = Color(0.24705882, 0.24705882, 0.24705882, 0.23529412)
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=656608477]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 75.0
+offset_right = 688.0
+offset_bottom = 475.0
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 4
+columns = 4
+
+[node name="Row_1" type="VBoxContainer" parent="GridContainer" unique_id=2137552480]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Item_1" type="Button" parent="GridContainer/Row_1" unique_id=1929867672]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Item_2" type="Button" parent="GridContainer/Row_1" unique_id=1083287285]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Item_3" type="Button" parent="GridContainer/Row_1" unique_id=1310887711]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Item_4" type="Button" parent="GridContainer/Row_1" unique_id=465814684]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Row_2" type="VBoxContainer" parent="GridContainer" unique_id=1959958642]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Item_5" type="Button" parent="GridContainer/Row_2" unique_id=444603679]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Item_6" type="Button" parent="GridContainer/Row_2" unique_id=1507644609]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Item_7" type="Button" parent="GridContainer/Row_2" unique_id=1496585417]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Item_8" type="Button" parent="GridContainer/Row_2" unique_id=201522605]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Row_3" type="VBoxContainer" parent="GridContainer" unique_id=230912428]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Item_9" type="Button" parent="GridContainer/Row_3" unique_id=239369092]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Item_10" type="Button" parent="GridContainer/Row_3" unique_id=28090724]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Item_11" type="Button" parent="GridContainer/Row_3" unique_id=765883022]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Item_12" type="Button" parent="GridContainer/Row_3" unique_id=1540948105]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Row_4" type="VBoxContainer" parent="GridContainer" unique_id=903991567]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Item_13" type="Button" parent="GridContainer/Row_4" unique_id=2078426620]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Item_14" type="Button" parent="GridContainer/Row_4" unique_id=2004444010]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Item_15" type="Button" parent="GridContainer/Row_4" unique_id=1718604926]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Item_16" type="Button" parent="GridContainer/Row_4" unique_id=1935112315]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TabContainer" type="TabContainer" parent="." unique_id=1642586043]
+layout_mode = 0
+offset_left = 713.0
+offset_top = 325.0
+offset_right = 863.0
+offset_bottom = 475.0
+tab_alignment = 1
+current_tab = 0
+
+[node name="Desc" type="Control" parent="TabContainer" unique_id=396019264]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Stats" type="Control" parent="TabContainer" unique_id=17065585]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
