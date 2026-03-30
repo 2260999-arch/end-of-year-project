@@ -1,5 +1,20 @@
 [gd_scene format=3 uid="uid://c60b1ckq6ate"]
 
+[ext_resource type="Script" uid="uid://dpayj064ap746" path="res://Scripts/inventory.gd" id="1_wdn4f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xek5a"]
+font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_wdn4f"]
+font_size = 12
+
+[sub_resource type="Gradient" id="Gradient_k5gp2"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yxepq"]
+gradient = SubResource("Gradient_k5gp2")
+
+[sub_resource type="LabelSettings" id="LabelSettings_0n8tc"]
+
 [node name="Inventory" type="Control" unique_id=97410509]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_wdn4f")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=603116587]
 layout_mode = 0
@@ -114,6 +130,13 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=772210048]
+layout_mode = 0
+offset_left = 713.0
+offset_top = 125.0
+offset_right = 863.0
+offset_bottom = 325.0
+
 [node name="TabContainer" type="TabContainer" parent="." unique_id=1642586043]
 layout_mode = 0
 offset_left = 713.0
@@ -121,13 +144,90 @@ offset_top = 325.0
 offset_right = 863.0
 offset_bottom = 475.0
 tab_alignment = 1
-current_tab = 0
+current_tab = 1
 
 [node name="Desc" type="Control" parent="TabContainer" unique_id=396019264]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
+[node name="Desc Label" type="Label" parent="TabContainer/Desc" unique_id=548986657]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_xek5a")
+autowrap_mode = 3
+
 [node name="Stats" type="Control" parent="TabContainer" unique_id=17065585]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 1
+
+[node name="Stats Label" type="Label" parent="TabContainer/Stats" unique_id=1011451578]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 77.0
+grow_horizontal = 2
+pivot_offset = Vector2(20, 0)
+text = "Type: N/A
+Atk: N/A
+Cd:N/A
+"
+label_settings = SubResource("LabelSettings_wdn4f")
+horizontal_alignment = 1
+
+[node name="Item_Image" type="TextureRect" parent="." unique_id=894950058]
+layout_mode = 0
+offset_left = 755.0
+offset_top = 175.0
+offset_right = 819.0
+offset_bottom = 239.0
+texture = SubResource("GradientTexture2D_yxepq")
+
+[node name="Weapon Name" type="Label" parent="." unique_id=1740028211]
+layout_mode = 0
+offset_left = 727.0
+offset_top = 125.0
+offset_right = 848.0
+offset_bottom = 148.0
+text = "EMPTY"
+label_settings = SubResource("LabelSettings_0n8tc")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Equip" type="Button" parent="." unique_id=821204562]
+visible = false
+layout_mode = 0
+offset_left = 758.0
+offset_top = 248.0
+offset_right = 815.0
+offset_bottom = 279.0
+text = "EQUIP"
+
+[node name="Discard" type="Button" parent="." unique_id=894729288]
+visible = false
+layout_mode = 0
+offset_left = 747.0
+offset_top = 291.0
+offset_right = 824.0
+offset_bottom = 322.0
+text = "DISCARD"
+
+[node name="Unequip" type="Button" parent="." unique_id=1217319811]
+visible = false
+layout_mode = 0
+offset_left = 746.0
+offset_top = 248.0
+offset_right = 827.0
+offset_bottom = 279.0
+text = "UNEQUIP"
+
+[connection signal="pressed" from="GridContainer/Row_1/Item_1" to="." method="_on_item_1_pressed"]
+[connection signal="pressed" from="GridContainer/Row_1/Item_2" to="." method="_on_item_2_pressed"]
+[connection signal="pressed" from="GridContainer/Row_1/Item_3" to="." method="_on_item_3_pressed"]
+[connection signal="pressed" from="GridContainer/Row_1/Item_4" to="." method="_on_item_4_pressed"]
+[connection signal="pressed" from="GridContainer/Row_2/Item_5" to="." method="_on_item_5_pressed"]
+[connection signal="pressed" from="GridContainer/Row_2/Item_6" to="." method="_on_item_6_pressed"]
