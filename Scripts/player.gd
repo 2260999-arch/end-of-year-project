@@ -48,9 +48,5 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _process(delta: float) -> void:
-	if PlayerInfo.has_gun == true:
-		if Input.is_action_just_pressed("Special"):
-			var new_bul = bullet.instantiate()
-			new_bul.global_position = global_position
-			add_child(new_bul)
+	pass
 		

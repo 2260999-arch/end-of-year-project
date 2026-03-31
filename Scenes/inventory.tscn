@@ -172,9 +172,7 @@ offset_right = 20.0
 offset_bottom = 77.0
 grow_horizontal = 2
 pivot_offset = Vector2(20, 0)
-text = "Type: N/A
-Atk: N/A
-Cd:N/A
+text = "
 "
 label_settings = SubResource("LabelSettings_wdn4f")
 horizontal_alignment = 1
@@ -231,3 +229,14 @@ text = "UNEQUIP"
 [connection signal="pressed" from="GridContainer/Row_1/Item_4" to="." method="_on_item_4_pressed"]
 [connection signal="pressed" from="GridContainer/Row_2/Item_5" to="." method="_on_item_5_pressed"]
 [connection signal="pressed" from="GridContainer/Row_2/Item_6" to="." method="_on_item_6_pressed"]
+[connection signal="pressed" from="GridContainer/Row_2/Item_7" to="." method="_on_item_7_pressed"]
+[connection signal="pressed" from="GridContainer/Row_2/Item_8" to="." method="_on_item_8_pressed"]
+[connection signal="pressed" from="GridContainer/Row_3/Item_9" to="." method="_on_item_9_pressed"]
+[connection signal="pressed" from="GridContainer/Row_3/Item_10" to="." method="_on_item_10_pressed"]
+[connection signal="pressed" from="GridContainer/Row_3/Item_11" to="." method="_on_item_11_pressed"]
+[connection signal="pressed" from="GridContainer/Row_3/Item_12" to="." method="_on_item_12_pressed"]
+[connection signal="pressed" from="GridContainer/Row_4/Item_13" to="." method="_on_item_13_pressed"]
+[connection signal="pressed" from="GridContainer/Row_4/Item_14" to="." method="_on_item_14_pressed"]
+[connection signal="pressed" from="GridContainer/Row_4/Item_15" to="." method="_on_item_15_pressed"]
+[connection signal="pressed" from="GridContainer/Row_4/Item_16" to="." method="_on_item_16_pressed"]
+[connection signal="pressed" from="Discard" to="." method="_on_discard_pressed"]

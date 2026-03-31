@@ -19,3 +19,7 @@ var pistol = ["Pistol", "Ranged", 20, 1.5,
 				"A small caliber firearm used for self-defense by many."]
 var rifle = ["Rifle", "Ranged", 40, 2,
 				"A standard firearm used for hunting"]
+var handcannon = ["Handcannon", "Ranged", 80, 7.5,
+				"A powerful handheld weapon that can obliterate hostile forces."]
+
+# "Future" weapons

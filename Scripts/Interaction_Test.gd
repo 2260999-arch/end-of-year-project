@@ -11,7 +11,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Interact") && interactable == true:
-		PlayerInfo.has_gun = true
+		for i in range(PlayerInfo.player_inventory.size()):
+			if PlayerInfo.player_inventory[i] == PlayerInfo.empty:
+				PlayerInfo.player_inventory[i] = Weapons.machete
+			else:
+				pass
 
 
 func _on_area_entered(area: Area2D) -> void:
