@@ -1,8 +1,10 @@
 extends Node2D
 
-
+var current_weapon = hands
+var movable = true
 var direction = 1
 var empty = ["EMPTY", "N/A", "N/A", "N/A", ""]
+var hands = ["Hands", "Melee", 5, 0.5, "Your hands, useful for many things, including punching."]
 var player_inventory = [empty, empty, empty, empty,
 						empty, empty, empty, empty, 
 						empty, empty, empty, empty, 

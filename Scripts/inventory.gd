@@ -7,6 +7,7 @@ extends Control
 @onready var unequip: Button = $Unequip
 @onready var desc_label: Label = $"TabContainer/Desc/Desc Label"
 @onready var stats_label: Label = $"TabContainer/Stats/Stats Label"
+
 var current_item = 0
 var equipped_items=[false, false, false, false,
 					false, false, false, false,
@@ -119,3 +120,8 @@ func _on_item_16_pressed() -> void:
 func _on_discard_pressed() -> void:
 	PlayerInfo.player_inventory[current_item] = PlayerInfo.empty
 	_on_item_pressed(current_item)
+
+
+func _on_visibility_button_pressed() -> void:
+	visible = false
+	PlayerInfo.movable = true

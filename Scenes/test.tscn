@@ -8,10 +8,6 @@ size = Vector2(40, 40)
 
 [node name="Test" type="Node2D" unique_id=1622736375]
 
-[node name="Player" parent="." unique_id=1316389754 instance=ExtResource("1_lc1oi")]
-position = Vector2(582, 175)
-collision_layer = 2
-
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=955842639]
 position = Vector2(306, 233)
 scale = Vector2(14.5199995, 7.12)
@@ -27,3 +23,8 @@ shape = SubResource("RectangleShape2D_lc1oi")
 
 [node name="Interaction Test" parent="." unique_id=364518175 instance=ExtResource("2_8od7v")]
 position = Vector2(402, 152)
+
+[node name="Player" parent="." unique_id=1316389754 instance=ExtResource("1_lc1oi")]
+top_level = true
+position = Vector2(1, -140)
+collision_layer = 2

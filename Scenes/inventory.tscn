@@ -223,6 +223,14 @@ offset_right = 827.0
 offset_bottom = 279.0
 text = "UNEQUIP"
 
+[node name="Visibility Button" type="Button" parent="." unique_id=437672813]
+layout_mode = 0
+offset_left = 851.0
+offset_top = 77.0
+offset_right = 886.0
+offset_bottom = 112.0
+text = "X"
+
 [connection signal="pressed" from="GridContainer/Row_1/Item_1" to="." method="_on_item_1_pressed"]
 [connection signal="pressed" from="GridContainer/Row_1/Item_2" to="." method="_on_item_2_pressed"]
 [connection signal="pressed" from="GridContainer/Row_1/Item_3" to="." method="_on_item_3_pressed"]
@@ -240,3 +248,4 @@ text = "UNEQUIP"
 [connection signal="pressed" from="GridContainer/Row_4/Item_15" to="." method="_on_item_15_pressed"]
 [connection signal="pressed" from="GridContainer/Row_4/Item_16" to="." method="_on_item_16_pressed"]
 [connection signal="pressed" from="Discard" to="." method="_on_discard_pressed"]
+[connection signal="pressed" from="Visibility Button" to="." method="_on_visibility_button_pressed"]

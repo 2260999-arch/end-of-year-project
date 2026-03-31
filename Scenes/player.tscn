@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://jgf1mbdhtynq"]
 
 [ext_resource type="Script" uid="uid://b8047ipqfelvw" path="res://Scripts/player.gd" id="1_v0iea"]
+[ext_resource type="PackedScene" uid="uid://c60b1ckq6ate" path="res://Scenes/inventory.tscn" id="2_cvnsp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f60y1"]
 size = Vector2(32, 32)
@@ -12,20 +13,25 @@ size = Vector2(62, 62)
 script = ExtResource("1_v0iea")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=5844030]
-offset_left = -16.0
-offset_top = -16.0
-offset_right = 16.0
-offset_bottom = 16.0
+offset_left = 560.0
+offset_top = 308.0
+offset_right = 592.0
+offset_bottom = 340.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=372644475]
+position = Vector2(576, 324)
 shape = SubResource("RectangleShape2D_f60y1")
 debug_color = Color(0.9941686, 0, 0.23354813, 0.41960785)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=529192919]
+position = Vector2(576, 324)
 
 [node name="Interact Range" type="Area2D" parent="." unique_id=1513343908]
+position = Vector2(576, 324)
 collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact Range" unique_id=865218095]
 shape = SubResource("RectangleShape2D_v0iea")
+
+[node name="Inventory" parent="." unique_id=97410509 instance=ExtResource("2_cvnsp")]

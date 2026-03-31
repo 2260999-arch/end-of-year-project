@@ -6,12 +6,13 @@ var JUMP_VELOCITY = -200.0
 var wall_jump_velo = -200.0
 var gravity = 400.0
 var jumping = false
-var movable = true
 var bullet = preload("res://Scenes/test_bullet.tscn")
+@onready var inventory: Control = $Inventory
 
 
 func _physics_process(delta: float) -> void:
-	if movable:
+	velocity.x = 0
+	if PlayerInfo.movable:
 		
 		# Add the gravity.
 		if not is_on_floor():
@@ -48,5 +49,10 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _process(delta: float) -> void:
-	pass
-		
+	if Input.is_action_just_pressed("Inventory"):
+		if !inventory.visible:
+			inventory.visible = true
+			PlayerInfo.movable = false
+		else:
+			inventory.visible = false
+			PlayerInfo.movable = true

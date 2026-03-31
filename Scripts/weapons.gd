@@ -23,3 +23,15 @@ var handcannon = ["Handcannon", "Ranged", 80, 7.5,
 				"A powerful handheld weapon that can obliterate hostile forces."]
 
 # "Future" weapons
+var plasma_knife = ["Plasma Knife", "Melee", 15, .5,
+				"A knife from the future! Careful, it's very hot."]
+var plasma_sabre = ["Plasma Sabre", "Melee", 40, 1.25,
+				"A sofisticated futuristic sword. Extremely hot and cuts through metal like butter."]
+var plasma_pistol = ["Plasma Pistol", "Ranged", 30, 1.5,
+				"Advanced firearms! Launches superheated plasma at your opponents."]
+var laser_pistol = ["Laser Pistol", "Ranged", 25, 1.25,
+				"An advanced weapon that uses lasers to burn your enimies."]
+var laser_rifle = ["Laser Rifle", "Ranged", 60, 2, 
+				"Adanced rifle used by some militaristic groups and others for hunting."]
+var plasma_gun = ["Plasma Gun", "Ranged", 60, .25,
+				"The most sophisticated and deadly weapon you'll find here. Such an advanced weapon is hard to find."]
