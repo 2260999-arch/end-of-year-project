@@ -2,6 +2,44 @@
 
 [ext_resource type="Script" uid="uid://dpayj064ap746" path="res://Scripts/inventory.gd" id="1_wdn4f"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trvqw"]
+bg_color = Color(0, 0, 0.17254902, 0.23529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aqnmd"]
+bg_color = Color(0, 0.105882354, 0.5254902, 0.15686275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wdn4f"]
+bg_color = Color(0, 0.105882354, 0.5254902, 0.15686275)
+
+[sub_resource type="Theme" id="Theme_k5gp2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4ksx"]
+bg_color = Color(0, 0.105882354, 0.5254902, 0.15686275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxepq"]
+bg_color = Color(0, 0.105882354, 0.5254902, 0.15686275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0n8tc"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0.17254902, 0.23529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k5gp2"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0.105882354, 0.5254902, 0.15686275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1vlg"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0.17254902, 0.3137255)
+
 [sub_resource type="LabelSettings" id="LabelSettings_xek5a"]
 font_size = 12
 
@@ -15,6 +53,18 @@ gradient = SubResource("Gradient_k5gp2")
 
 [sub_resource type="LabelSettings" id="LabelSettings_0n8tc"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qg7d"]
+bg_color = Color(0, 0, 0.17254902, 0.23529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bvt08"]
+bg_color = Color(0, 0.105882354, 0.5254902, 0.15686275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c5ffv"]
+bg_color = Color(0, 0, 0.17254902, 0.23529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sd8fj"]
+bg_color = Color(0, 0.105882354, 0.5254902, 0.15686275)
+
 [node name="Inventory" type="Control" unique_id=97410509]
 layout_mode = 3
 anchors_preset = 15
@@ -26,18 +76,18 @@ script = ExtResource("1_wdn4f")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=603116587]
 layout_mode = 0
-offset_left = 288.0
-offset_top = 75.0
-offset_right = 888.0
-offset_bottom = 475.0
-color = Color(0.24705882, 0.24705882, 0.24705882, 0.23529412)
+offset_left = 176.0
+offset_top = 99.0
+offset_right = 976.0
+offset_bottom = 549.0
+color = Color(0, 0, 0, 0.23529412)
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=656608477]
 layout_mode = 0
-offset_left = 288.0
-offset_top = 75.0
-offset_right = 688.0
-offset_bottom = 475.0
+offset_left = 376.0
+offset_top = 124.0
+offset_right = 776.0
+offset_bottom = 524.0
 theme_override_constants/h_separation = 4
 theme_override_constants/v_separation = 4
 columns = 4
@@ -51,18 +101,26 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_trvqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aqnmd")
 
 [node name="Item_2" type="Button" parent="GridContainer/Row_1" unique_id=1083287285]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_trvqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aqnmd")
 
 [node name="Item_3" type="Button" parent="GridContainer/Row_1" unique_id=1310887711]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_trvqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aqnmd")
 
 [node name="Item_4" type="Button" parent="GridContainer/Row_1" unique_id=465814684]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_trvqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aqnmd")
 
 [node name="Row_2" type="VBoxContainer" parent="GridContainer" unique_id=1959958642]
 layout_mode = 2
@@ -73,18 +131,26 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_trvqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aqnmd")
 
 [node name="Item_6" type="Button" parent="GridContainer/Row_2" unique_id=1507644609]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_trvqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aqnmd")
 
 [node name="Item_7" type="Button" parent="GridContainer/Row_2" unique_id=1496585417]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_trvqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aqnmd")
 
 [node name="Item_8" type="Button" parent="GridContainer/Row_2" unique_id=201522605]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_trvqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aqnmd")
 
 [node name="Row_3" type="VBoxContainer" parent="GridContainer" unique_id=230912428]
 layout_mode = 2
@@ -95,18 +161,26 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_trvqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aqnmd")
 
 [node name="Item_10" type="Button" parent="GridContainer/Row_3" unique_id=28090724]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_trvqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aqnmd")
 
 [node name="Item_11" type="Button" parent="GridContainer/Row_3" unique_id=765883022]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_trvqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aqnmd")
 
 [node name="Item_12" type="Button" parent="GridContainer/Row_3" unique_id=1540948105]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_trvqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aqnmd")
 
 [node name="Row_4" type="VBoxContainer" parent="GridContainer" unique_id=903991567]
 layout_mode = 2
@@ -117,32 +191,54 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_trvqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aqnmd")
 
 [node name="Item_14" type="Button" parent="GridContainer/Row_4" unique_id=2004444010]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_trvqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aqnmd")
 
 [node name="Item_15" type="Button" parent="GridContainer/Row_4" unique_id=1718604926]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_trvqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aqnmd")
 
 [node name="Item_16" type="Button" parent="GridContainer/Row_4" unique_id=1935112315]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_trvqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aqnmd")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=772210048]
 layout_mode = 0
-offset_left = 713.0
-offset_top = 125.0
-offset_right = 863.0
-offset_bottom = 325.0
+offset_left = 801.0
+offset_top = 174.0
+offset_right = 951.0
+offset_bottom = 374.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wdn4f")
+
+[node name="PanelContainer2" type="PanelContainer" parent="." unique_id=2080612257]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 154.0
+offset_right = 351.0
+offset_bottom = 499.0
+theme = SubResource("Theme_k5gp2")
+theme_override_styles/panel = SubResource("StyleBoxFlat_o4ksx")
 
 [node name="TabContainer" type="TabContainer" parent="." unique_id=1642586043]
 layout_mode = 0
-offset_left = 713.0
-offset_top = 325.0
-offset_right = 863.0
-offset_bottom = 475.0
+offset_left = 801.0
+offset_top = 374.0
+offset_right = 951.0
+offset_bottom = 524.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxepq")
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_0n8tc")
+theme_override_styles/tab_hovered = SubResource("StyleBoxFlat_k5gp2")
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_k1vlg")
 tab_alignment = 1
 current_tab = 1
 
@@ -179,18 +275,18 @@ horizontal_alignment = 1
 
 [node name="Item_Image" type="TextureRect" parent="." unique_id=894950058]
 layout_mode = 0
-offset_left = 755.0
-offset_top = 175.0
-offset_right = 819.0
-offset_bottom = 239.0
+offset_left = 843.0
+offset_top = 224.0
+offset_right = 907.0
+offset_bottom = 288.0
 texture = SubResource("GradientTexture2D_yxepq")
 
 [node name="Weapon Name" type="Label" parent="." unique_id=1740028211]
 layout_mode = 0
-offset_left = 727.0
-offset_top = 125.0
-offset_right = 848.0
-offset_bottom = 148.0
+offset_left = 815.0
+offset_top = 174.0
+offset_right = 936.0
+offset_bottom = 197.0
 text = "EMPTY"
 label_settings = SubResource("LabelSettings_0n8tc")
 horizontal_alignment = 1
@@ -199,36 +295,44 @@ autowrap_mode = 3
 [node name="Equip" type="Button" parent="." unique_id=821204562]
 visible = false
 layout_mode = 0
-offset_left = 758.0
-offset_top = 248.0
-offset_right = 815.0
-offset_bottom = 279.0
+offset_left = 846.0
+offset_top = 294.0
+offset_right = 904.0
+offset_bottom = 325.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5qg7d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bvt08")
 text = "EQUIP"
 
 [node name="Discard" type="Button" parent="." unique_id=894729288]
 visible = false
 layout_mode = 0
-offset_left = 747.0
-offset_top = 291.0
-offset_right = 824.0
-offset_bottom = 322.0
+offset_left = 835.0
+offset_top = 337.0
+offset_right = 913.0
+offset_bottom = 368.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5qg7d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bvt08")
 text = "DISCARD"
 
 [node name="Unequip" type="Button" parent="." unique_id=1217319811]
 visible = false
 layout_mode = 0
-offset_left = 746.0
-offset_top = 248.0
-offset_right = 827.0
-offset_bottom = 279.0
+offset_left = 834.0
+offset_top = 294.0
+offset_right = 916.0
+offset_bottom = 325.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5qg7d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bvt08")
 text = "UNEQUIP"
 
 [node name="Visibility Button" type="Button" parent="." unique_id=437672813]
 layout_mode = 0
-offset_left = 851.0
-offset_top = 77.0
-offset_right = 886.0
-offset_bottom = 112.0
+offset_left = 936.0
+offset_top = 104.0
+offset_right = 971.0
+offset_bottom = 139.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c5ffv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sd8fj")
 text = "X"
 
 [connection signal="pressed" from="GridContainer/Row_1/Item_1" to="." method="_on_item_1_pressed"]
