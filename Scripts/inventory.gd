@@ -38,10 +38,10 @@ func _on_item_pressed(item_num:int)->void:
 				equip.visible = false
 				unequip.visible = true
 				discard.visible = true
-		
-			stats_label.text = ("Type: " + PlayerInfo.player_inventory[item_num][1] + '\n' + 
-							"Atk: " + str(PlayerInfo.player_inventory[item_num][2])+ '\n'+
-							"Cd: " +str(PlayerInfo.player_inventory[item_num][3]))
+			if PlayerInfo.player_inventory[item_num][5] == "Weapon":
+				stats_label.text = ("Type: " + PlayerInfo.player_inventory[item_num][1] + '\n' + 
+								"Atk: " + str(PlayerInfo.player_inventory[item_num][2])+ '\n'+
+								"Cd: " +str(PlayerInfo.player_inventory[item_num][3]))
 			desc_label.text = (PlayerInfo.player_inventory[item_num][4])
 		else:
 			stats_label.text = ""
