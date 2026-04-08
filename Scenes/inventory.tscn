@@ -2,6 +2,16 @@
 
 [ext_resource type="Script" uid="uid://dpayj064ap746" path="res://Scripts/inventory.gd" id="1_wdn4f"]
 
+[sub_resource type="Theme" id="Theme_k5gp2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4ksx"]
+bg_color = Color(0, 0, 0, 0.23529412)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.44313726, 0.44313726, 0.44313726, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trvqw"]
 bg_color = Color(0, 0, 0, 0.23529412)
 border_width_left = 2
@@ -68,16 +78,6 @@ border_width_bottom = 2
 border_color = Color(0.44313726, 0.44313726, 0.44313726, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wdn4f"]
-bg_color = Color(0, 0, 0, 0.23529412)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.44313726, 0.44313726, 0.44313726, 1)
-
-[sub_resource type="Theme" id="Theme_k5gp2"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4ksx"]
 bg_color = Color(0, 0, 0, 0.23529412)
 border_width_left = 2
 border_width_top = 2
@@ -196,13 +196,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wdn4f")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=603116587]
+[node name="PanelContainer4" type="PanelContainer" parent="." unique_id=1352962300]
 layout_mode = 0
 offset_left = 176.0
 offset_top = 99.0
 offset_right = 976.0
 offset_bottom = 549.0
-color = Color(0, 0, 0, 0.3137255)
+theme = SubResource("Theme_k5gp2")
+theme_override_styles/panel = SubResource("StyleBoxFlat_o4ksx")
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=656608477]
 layout_mode = 0
@@ -369,9 +370,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_o4ksx")
 
 [node name="PanelContainer3" type="PanelContainer" parent="." unique_id=319369279]
 layout_mode = 0
-offset_left = 238.0
+offset_left = 217.0
 offset_top = 204.0
-offset_right = 313.0
+offset_right = 339.0
 offset_bottom = 376.0
 theme = SubResource("Theme_k5gp2")
 theme_override_styles/panel = SubResource("StyleBoxFlat_o4ksx")
@@ -428,7 +429,7 @@ offset_right = 905.0
 offset_bottom = 266.0
 texture = SubResource("GradientTexture2D_yxepq")
 
-[node name="Weapon Name" type="Label" parent="." unique_id=1740028211]
+[node name="Item Name" type="Label" parent="." unique_id=1740028211]
 layout_mode = 0
 offset_left = 813.0
 offset_top = 152.0
@@ -443,9 +444,9 @@ autowrap_mode = 3
 visible = false
 layout_mode = 0
 offset_left = 846.0
-offset_top = 294.0
+offset_top = 271.0
 offset_right = 904.0
-offset_bottom = 325.0
+offset_bottom = 302.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_5qg7d")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_q5cdx")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bvt08")
@@ -455,9 +456,9 @@ text = "EQUIP"
 visible = false
 layout_mode = 0
 offset_left = 835.0
-offset_top = 337.0
+offset_top = 314.0
 offset_right = 913.0
-offset_bottom = 368.0
+offset_bottom = 345.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_5qg7d")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_q5cdx")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bvt08")
@@ -467,9 +468,9 @@ text = "DISCARD"
 visible = false
 layout_mode = 0
 offset_left = 834.0
-offset_top = 294.0
+offset_top = 271.0
 offset_right = 916.0
-offset_bottom = 325.0
+offset_bottom = 302.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_5qg7d")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_q5cdx")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bvt08")
@@ -552,5 +553,12 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_6nypo")
 [connection signal="pressed" from="GridContainer/Row_4/Item_14" to="." method="_on_item_14_pressed"]
 [connection signal="pressed" from="GridContainer/Row_4/Item_15" to="." method="_on_item_15_pressed"]
 [connection signal="pressed" from="GridContainer/Row_4/Item_16" to="." method="_on_item_16_pressed"]
+[connection signal="pressed" from="Equip" to="." method="_on_equip_pressed"]
 [connection signal="pressed" from="Discard" to="." method="_on_discard_pressed"]
+[connection signal="pressed" from="Unequip" to="." method="_on_unequip_pressed"]
 [connection signal="pressed" from="Visibility Button" to="." method="_on_visibility_button_pressed"]
+[connection signal="pressed" from="Head" to="." method="_on_head_pressed"]
+[connection signal="pressed" from="Body" to="." method="_on_body_pressed"]
+[connection signal="pressed" from="Legs" to="." method="_on_legs_pressed"]
+[connection signal="pressed" from="Weapon" to="." method="_on_weapon_pressed"]
+[connection signal="pressed" from="Special" to="." method="_on_special_pressed"]
