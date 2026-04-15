@@ -32,7 +32,7 @@ var plasma_pistol = ["Plasma Pistol", "Ranged", 30, 1.5,
 var laser_pistol = ["Laser Pistol", "Ranged", 25, 1.25,
 				"An advanced weapon that uses lasers to burn your enimies.", "Weapon"]
 var laser_rifle = ["Laser Rifle", "Ranged", 60, 2, 
-				"Adanced rifle used by some militaristic groups and others for hunting.", "Weapon"]
+				"Adanced rifle used in warfare.", "Weapon"]
 var plasma_gun = ["Plasma Gun", "Ranged", 60, .25,
 				"The most sophisticated and deadly weapon you'll find here. Such an advanced weapon is hard to find.", 
 				"Weapon"]

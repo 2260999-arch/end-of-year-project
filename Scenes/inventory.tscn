@@ -187,6 +187,9 @@ border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.44313726, 0.44313726, 0.44313726, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_k5gp2"]
+font_size = 8
+
 [node name="Inventory" type="Control" unique_id=97410509]
 layout_mode = 3
 anchors_preset = 15
@@ -371,9 +374,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_o4ksx")
 [node name="PanelContainer3" type="PanelContainer" parent="." unique_id=319369279]
 layout_mode = 0
 offset_left = 217.0
-offset_top = 204.0
+offset_top = 167.0
 offset_right = 339.0
-offset_bottom = 376.0
+offset_bottom = 339.0
 theme = SubResource("Theme_k5gp2")
 theme_override_styles/panel = SubResource("StyleBoxFlat_o4ksx")
 
@@ -464,6 +467,18 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_q5cdx")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bvt08")
 text = "DISCARD"
 
+[node name="Equipped_Discard" type="Button" parent="." unique_id=437746544]
+visible = false
+layout_mode = 0
+offset_left = 835.0
+offset_top = 314.0
+offset_right = 913.0
+offset_bottom = 345.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5qg7d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_q5cdx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bvt08")
+text = "DISCARD"
+
 [node name="Unequip" type="Button" parent="." unique_id=1217319811]
 visible = false
 layout_mode = 0
@@ -490,9 +505,9 @@ text = "X"
 [node name="Head" type="Button" parent="." unique_id=905341620]
 layout_mode = 0
 offset_left = 220.0
-offset_top = 381.0
+offset_top = 344.0
 offset_right = 255.0
-offset_bottom = 416.0
+offset_bottom = 379.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_c5ffv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_r01aq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_6nypo")
@@ -500,9 +515,9 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_6nypo")
 [node name="Body" type="Button" parent="." unique_id=831514540]
 layout_mode = 0
 offset_left = 260.0
-offset_top = 381.0
+offset_top = 344.0
 offset_right = 295.0
-offset_bottom = 416.0
+offset_bottom = 379.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_c5ffv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_r01aq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_6nypo")
@@ -510,9 +525,9 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_6nypo")
 [node name="Legs" type="Button" parent="." unique_id=521998884]
 layout_mode = 0
 offset_left = 300.0
-offset_top = 381.0
+offset_top = 344.0
 offset_right = 335.0
-offset_bottom = 416.0
+offset_bottom = 379.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_c5ffv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_r01aq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_6nypo")
@@ -520,9 +535,9 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_6nypo")
 [node name="Weapon" type="Button" parent="." unique_id=1331340682]
 layout_mode = 0
 offset_left = 241.0
-offset_top = 421.0
+offset_top = 384.0
 offset_right = 276.0
-offset_bottom = 456.0
+offset_bottom = 419.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_c5ffv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_r01aq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_6nypo")
@@ -530,12 +545,22 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_6nypo")
 [node name="Special" type="Button" parent="." unique_id=650513496]
 layout_mode = 0
 offset_left = 281.0
-offset_top = 421.0
+offset_top = 384.0
 offset_right = 316.0
-offset_bottom = 456.0
+offset_bottom = 419.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_c5ffv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_r01aq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_6nypo")
+
+[node name="Armor Buff Label" type="Label" parent="." unique_id=393624000]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 428.0
+offset_right = 342.0
+offset_bottom = 488.0
+label_settings = SubResource("LabelSettings_k5gp2")
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [connection signal="pressed" from="GridContainer/Row_1/Item_1" to="." method="_on_item_1_pressed"]
 [connection signal="pressed" from="GridContainer/Row_1/Item_2" to="." method="_on_item_2_pressed"]
@@ -555,6 +580,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_6nypo")
 [connection signal="pressed" from="GridContainer/Row_4/Item_16" to="." method="_on_item_16_pressed"]
 [connection signal="pressed" from="Equip" to="." method="_on_equip_pressed"]
 [connection signal="pressed" from="Discard" to="." method="_on_discard_pressed"]
+[connection signal="pressed" from="Equipped_Discard" to="." method="_on_equipped_discard_pressed"]
 [connection signal="pressed" from="Unequip" to="." method="_on_unequip_pressed"]
 [connection signal="pressed" from="Visibility Button" to="." method="_on_visibility_button_pressed"]
 [connection signal="pressed" from="Head" to="." method="_on_head_pressed"]
