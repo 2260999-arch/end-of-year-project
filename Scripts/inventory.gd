@@ -46,8 +46,12 @@ func _on_item_pressed(item_num:int)->void:
 				stats_label.text = ("Type: " + str(PlayerInfo.player_inventory[item_num][1]) + '\n' + 
 									"Negates " + str(PlayerInfo.player_inventory[item_num][2]) + " damage.")
 			elif PlayerInfo.player_inventory[item_num][5] == "Special":
-				if PlayerInfo.player_inventory[item_num][2] == "Speed":
-					stats_label.text = ("Type: " + PlayerInfo.player_inventory[item_num][3])
+				if PlayerInfo.player_inventory[item_num][1] == "Speed" || PlayerInfo.player_inventory[item_num][1] ==  "Jump":
+					stats_label.text = ("Type: " + PlayerInfo.player_inventory[item_num][3] + '\n' +
+								"Increases " + PlayerInfo.player_inventory[item_num][1] + " by x" + 
+								str(PlayerInfo.player_inventory[item_num][2]) + ".")
+				if PlayerInfo.player_inventory[item_num][1] == "Cooldown":
+					stats_label.text = ("Reduces cooldown for "+ PlayerInfo.player_inventory[item_num][3] +  " by "  + PlayerInfo.player_inventory[item_num][1] + "seconds.")
 			desc_label.text = (PlayerInfo.player_inventory[item_num][4])
 		else:
 			stats_label.text = ""
