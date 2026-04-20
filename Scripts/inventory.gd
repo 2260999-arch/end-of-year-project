@@ -51,7 +51,8 @@ func _on_item_pressed(item_num:int)->void:
 								"Increases " + PlayerInfo.player_inventory[item_num][1] + " by x" + 
 								str(PlayerInfo.player_inventory[item_num][2]) + ".")
 				if PlayerInfo.player_inventory[item_num][1] == "Cooldown":
-					stats_label.text = ("Reduces cooldown for "+ PlayerInfo.player_inventory[item_num][3] +  " by "  + PlayerInfo.player_inventory[item_num][1] + "seconds.")
+					stats_label.text = ("Reduces cooldown for "+ PlayerInfo.player_inventory[item_num][3] +  " by "
+					  + PlayerInfo.player_inventory[item_num][1] + "seconds.")
 			desc_label.text = (PlayerInfo.player_inventory[item_num][4])
 		else:
 			stats_label.text = ""
@@ -76,6 +77,14 @@ func on_equipped_item_pressed(item_num:int)->void:
 			elif PlayerInfo.equipped_items[item_num][5] == "Armor":
 				stats_label.text = ("Type: " + str(PlayerInfo.equipped_items[item_num][1]) + '\n' + 
 									"Negates " + str(PlayerInfo.equipped_items[item_num][2]) + " damage.")
+			elif PlayerInfo.equipped_items[item_num][5] == "Special":
+				if PlayerInfo.equipped_items[item_num][1] == "Speed" || PlayerInfo.equipped_items[item_num][1] ==  "Jump":
+					stats_label.text = ("Type: " + PlayerInfo.equipped_items[item_num][3] + '\n' +
+								"Increases " + PlayerInfo.equipped_items[item_num][1] + " by x" + 
+								str(PlayerInfo.equipped_items[item_num][2]) + ".")
+				if PlayerInfo.equipped_items[item_num][1] == "Cooldown":
+					stats_label.text = ("Reduces cooldown for "+ PlayerInfo.equipped_items[item_num][3] +  " by "
+					  + PlayerInfo.equipped_items[item_num][1] + "seconds.")
 			desc_label.text = (PlayerInfo.equipped_items[item_num][4])
 		elif PlayerInfo.equipped_items[item_num][0] == "Hands":
 			unequip.visible = false
@@ -237,6 +246,8 @@ func _on_unequip_pressed() -> void:
 				else:
 					PlayerInfo.player_inventory[i] = PlayerInfo.equipped_items[current_equipped]
 					PlayerInfo.equipped_items[current_equipped] = PlayerInfo.empty
+					if PlayerInfo.equipped_items[current_equipped] == PlayerInfo.equipped_items[1]:
+						PlayerInfo.check_booster()
 				_on_item_pressed(i)
 				return
 			else:

@@ -28,4 +28,6 @@ func check_booster() -> void:
 	if equipped_items[1][1] == "Jump" && jump_velo == -300.0:
 		temp = jump_velo * equipped_items[1][2]
 		jump_velo = temp + jump_velo
+	else:
+		jump_velo = -300.0
 		

@@ -25,7 +25,6 @@ Specials="*uid://bxfoaqmdjnf23"
 
 window/size/mode=2
 window/stretch/mode="canvas_items"
-window/stretch/scale_mode="integer"
 
 [input]
 

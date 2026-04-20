@@ -6,7 +6,9 @@ var wall_jump_velo = -200.0
 var gravity = 400.0
 var jumping = false
 var bullet = preload("res://Scenes/test_bullet.tscn")
+var dmg = PlayerInfo.equipped_items[0][2]
 @onready var inventory: Control = $Inventory
+@onready var melee_hitbox: CollisionShape2D = $MeleeAttack/MeleeHitbox
 
 
 func _physics_process(delta: float) -> void:
@@ -26,6 +28,10 @@ func _physics_process(delta: float) -> void:
 		var direction := Input.get_axis("Left", "Right")
 		if direction == -1.0 or direction == 1.0:
 			PlayerInfo.direction = direction
+			if direction == -1.0:
+				melee_hitbox.position.x = -15.5
+			if direction == 1.0:
+				melee_hitbox.position.x = 15.5
 		# Handle jump.
 		if Input.is_action_just_pressed("Jump") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
