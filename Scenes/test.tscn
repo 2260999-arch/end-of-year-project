@@ -22,9 +22,9 @@ position = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_lc1oi")
 
 [node name="Interaction Test" parent="." unique_id=364518175 instance=ExtResource("2_8od7v")]
-position = Vector2(402, 152)
+position = Vector2(401, 183)
 
 [node name="Player" parent="." unique_id=1316389754 instance=ExtResource("1_lc1oi")]
 top_level = true
-position = Vector2(1, -140)
+position = Vector2(589, 172)
 collision_layer = 2

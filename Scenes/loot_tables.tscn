@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dwxhdtiv1ur8u"]
+
+[ext_resource type="Script" uid="uid://dsfbgklah4fmq" path="res://Scripts/loot_tables.gd" id="1_8po7u"]
+
+[node name="Loot Tables" type="Node2D" unique_id=2017152449]
+script = ExtResource("1_8po7u")

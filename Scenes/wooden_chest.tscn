@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://cegehgxsgs5pj"]
+
+[ext_resource type="Script" uid="uid://d16owsacd1bss" path="res://Scripts/wooden_chest.gd" id="1_e5fj2"]
+[ext_resource type="Texture2D" uid="uid://dfscyenlcptb" path="res://Assets/Wood_Chest.png" id="1_gbx1i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5fj2"]
+atlas = ExtResource("1_gbx1i")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6ghu"]
+atlas = ExtResource("1_gbx1i")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkbit"]
+atlas = ExtResource("1_gbx1i")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shyxx"]
+atlas = ExtResource("1_gbx1i")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tb4rh"]
+atlas = ExtResource("1_gbx1i")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ew76"]
+atlas = ExtResource("1_gbx1i")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4lvp"]
+atlas = ExtResource("1_gbx1i")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5vfy"]
+atlas = ExtResource("1_gbx1i")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1gouf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5fj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6ghu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkbit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shyxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tb4rh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ew76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4lvp")
+}],
+"loop": false,
+"name": &"Opened",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5vfy")
+}],
+"loop": false,
+"name": &"Unopened",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1odk"]
+size = Vector2(74, 36)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6ghu"]
+bg_color = Color(0, 0, 0, 0.23529412)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.44313726, 0.44313726, 0.44313726, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gkbit"]
+font_size = 6
+
+[node name="Wooden Chest" type="Node2D" unique_id=816656303]
+script = ExtResource("1_e5fj2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1268036661]
+sprite_frames = SubResource("SpriteFrames_1gouf")
+animation = &"Opened"
+autoplay = "Unopened"
+frame = 6
+frame_progress = 1.0
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1399208953]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=415636145]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_t1odk")
+
+[node name="InteractUI" type="PanelContainer" parent="." unique_id=575813217]
+visible = false
+offset_left = -19.0
+offset_top = -20.0
+offset_right = 19.0
+offset_bottom = -4.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h6ghu")
+
+[node name="Label" type="Label" parent="InteractUI" unique_id=906933409]
+layout_mode = 2
+text = "Open Chest"
+label_settings = SubResource("LabelSettings_gkbit")
