@@ -1,6 +1,6 @@
 extends Node2D
 
-# "Medival" weapons
+# "Medeival" weapons
 var short_sword = ["Short Sword", "Melee", 10, 1, 
 				"A basic sword used for fighting.", "Weapon"]
 var basic_knife = ["Basic Knife", "Melee", 5, 0.5, 

@@ -110,7 +110,27 @@ offset_right = 19.0
 offset_bottom = -4.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_h6ghu")
 
-[node name="Label" type="Label" parent="InteractUI" unique_id=906933409]
+[node name="InteractText" type="Label" parent="InteractUI" unique_id=906933409]
 layout_mode = 2
 text = "Open Chest"
 label_settings = SubResource("LabelSettings_gkbit")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InventoryFull" type="PanelContainer" parent="." unique_id=17726745]
+visible = false
+offset_left = -22.0
+offset_top = -20.0
+offset_right = 22.0
+offset_bottom = -4.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h6ghu")
+
+[node name="FullText" type="Label" parent="InventoryFull" unique_id=347504591]
+layout_mode = 2
+text = "Inventory Full"
+label_settings = SubResource("LabelSettings_gkbit")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

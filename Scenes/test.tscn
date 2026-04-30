@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://dqh5bhcb7f8ph"]
 
 [ext_resource type="PackedScene" uid="uid://jgf1mbdhtynq" path="res://Scenes/player.tscn" id="1_lc1oi"]
-[ext_resource type="PackedScene" uid="uid://ckj8daacqlkum" path="res://Scenes/interaction_test.tscn" id="2_8od7v"]
+[ext_resource type="PackedScene" uid="uid://cegehgxsgs5pj" path="res://Scenes/wooden_chest.tscn" id="3_qc4db"]
+[ext_resource type="PackedScene" uid="uid://bjfdcbf27fqt" path="res://Scenes/mil_crate.tscn" id="3_ys1qc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lc1oi"]
-size = Vector2(40, 40)
+size = Vector2(109.22865, 40)
 
 [node name="Test" type="Node2D" unique_id=1622736375]
 
@@ -13,18 +14,23 @@ position = Vector2(306, 233)
 scale = Vector2(14.5199995, 7.12)
 
 [node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=1251365225]
-offset_right = 40.0
+offset_left = -29.476587
+offset_right = 79.752075
 offset_bottom = 40.0
 color = Color(0, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2014504609]
-position = Vector2(20, 20)
+position = Vector2(25.619835, 20.000015)
+scale = Vector2(1, 1.0000004)
 shape = SubResource("RectangleShape2D_lc1oi")
-
-[node name="Interaction Test" parent="." unique_id=364518175 instance=ExtResource("2_8od7v")]
-position = Vector2(401, 183)
 
 [node name="Player" parent="." unique_id=1316389754 instance=ExtResource("1_lc1oi")]
 top_level = true
 position = Vector2(589, 172)
 collision_layer = 2
+
+[node name="Wooden Chest" parent="." unique_id=816656303 instance=ExtResource("3_qc4db")]
+position = Vector2(349, 214)
+
+[node name="Mil_Crate" parent="." unique_id=107962985 instance=ExtResource("3_ys1qc")]
+position = Vector2(238, 208)
