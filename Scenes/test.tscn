@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dqh5bhcb7f8ph"]
 
 [ext_resource type="PackedScene" uid="uid://jgf1mbdhtynq" path="res://Scenes/player.tscn" id="1_lc1oi"]
-[ext_resource type="PackedScene" uid="uid://cegehgxsgs5pj" path="res://Scenes/wooden_chest.tscn" id="3_qc4db"]
-[ext_resource type="PackedScene" uid="uid://bjfdcbf27fqt" path="res://Scenes/mil_crate.tscn" id="3_ys1qc"]
-[ext_resource type="PackedScene" uid="uid://fbyb1ovqwgmw" path="res://Scenes/sci_fi_crate.tscn" id="4_ys1qc"]
+[ext_resource type="PackedScene" uid="uid://cegehgxsgs5pj" path="res://Scenes/Crates/wooden_chest.tscn" id="3_qc4db"]
+[ext_resource type="PackedScene" uid="uid://bjfdcbf27fqt" path="res://Scenes/Crates/mil_crate.tscn" id="3_ys1qc"]
+[ext_resource type="PackedScene" uid="uid://fbyb1ovqwgmw" path="res://Scenes/Crates/sci_fi_crate.tscn" id="4_ys1qc"]
+[ext_resource type="PackedScene" uid="uid://bvfrxojfhulkl" path="res://Scenes/Crates/closet.tscn" id="5_35xla"]
+[ext_resource type="PackedScene" uid="uid://2buu0vmjf5m7" path="res://Scenes/Crates/booster_chest.tscn" id="6_i3aeo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lc1oi"]
 size = Vector2(109.22865, 40)
@@ -38,3 +40,9 @@ position = Vector2(238, 208)
 
 [node name="Sci_Fi_Crate" parent="." unique_id=1408995106 instance=ExtResource("4_ys1qc")]
 position = Vector2(116, 206)
+
+[node name="Closet" parent="." unique_id=390674913 instance=ExtResource("5_35xla")]
+position = Vector2(13, 205)
+
+[node name="Booster_Chest" parent="." unique_id=1091025853 instance=ExtResource("6_i3aeo")]
+position = Vector2(-65, 216)

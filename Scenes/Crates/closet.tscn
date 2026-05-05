@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://bvfrxojfhulkl"]
+
+[ext_resource type="Script" uid="uid://wdcgpdslf2mu" path="res://Scripts/closet.gd" id="1_0t2tp"]
+[ext_resource type="Texture2D" uid="uid://bgexf6ybwfihk" path="res://Assets/Closet.png" id="1_ixttv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0t2tp"]
+atlas = ExtResource("1_ixttv")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vknk"]
+atlas = ExtResource("1_ixttv")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1cbsb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0t2tp")
+}],
+"loop": false,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vknk")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7fvo"]
+size = Vector2(74, 72)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b4ok8"]
+bg_color = Color(0, 0, 0, 0.23529412)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.44313726, 0.44313726, 0.44313726, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ece3e"]
+font_size = 6
+
+[node name="Closet" type="Node2D" unique_id=390674913]
+script = ExtResource("1_0t2tp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=977190784]
+sprite_frames = SubResource("SpriteFrames_1cbsb")
+animation = &"open"
+autoplay = "closed"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=352699133]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1581640744]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_o7fvo")
+
+[node name="InteractUI" type="PanelContainer" parent="." unique_id=658040815]
+visible = false
+offset_left = -19.0
+offset_top = -49.0
+offset_right = 19.0
+offset_bottom = -33.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_b4ok8")
+
+[node name="InteractText" type="Label" parent="InteractUI" unique_id=506669996]
+layout_mode = 2
+text = "Open Chest"
+label_settings = SubResource("LabelSettings_ece3e")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InventoryFull" type="PanelContainer" parent="." unique_id=1562366052]
+visible = false
+offset_left = -22.0
+offset_top = -49.0
+offset_right = 22.0
+offset_bottom = -33.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_b4ok8")
+
+[node name="FullText" type="Label" parent="InventoryFull" unique_id=1928975295]
+layout_mode = 2
+text = "Inventory Full"
+label_settings = SubResource("LabelSettings_ece3e")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
