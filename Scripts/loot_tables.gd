@@ -43,5 +43,4 @@ var all_table = [Weapons.basic_knife, Weapons.short_sword, Weapons.long_bow, Wea
 #Gives the player an item from the selected table.
 func roll_table(table:Array):
 	var length = table.size() -1
-	print(table[num_gen.randi_range(0,length)])
 	return table[num_gen.randi_range(0,length)]

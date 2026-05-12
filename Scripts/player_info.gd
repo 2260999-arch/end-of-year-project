@@ -1,5 +1,6 @@
 extends Node2D
 
+var hp = 100
 var movable = true
 var direction = 1
 var speed = 300.0
