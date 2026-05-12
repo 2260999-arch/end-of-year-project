@@ -177,6 +177,7 @@ func _on_discard_pressed() -> void:
 
 func _on_visibility_button_pressed() -> void:
 	visible = false
+	Engine.time_scale=1
 	PlayerInfo.movable = true
 
 
