@@ -12,7 +12,6 @@ var dmg = PlayerInfo.equipped_items[0][2]
 
 
 func _physics_process(delta: float) -> void:
-	velocity.x = 0
 	if PlayerInfo.movable:
 		
 		# Add the gravity.
@@ -56,7 +55,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Inventory") && is_on_floor():
 		if !inventory.visible:
 			inventory.visible = true
-			PlayerInfo.movable = false
+			Engine.time_scale = 0.0000001
 		else:
 			inventory.visible = false
-			PlayerInfo.movable = true
+			Engine.time_scale = 1

@@ -21,9 +21,8 @@ offset_top = -16.0
 offset_right = 16.0
 offset_bottom = 16.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=372644475]
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=372644475]
 shape = SubResource("RectangleShape2D_f60y1")
-debug_color = Color(0.9941686, 0, 0.23354813, 0.41960785)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=529192919]
 
@@ -33,10 +32,11 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact Range" unique_id=865218095]
 shape = SubResource("RectangleShape2D_v0iea")
+debug_color = Color(0.99847776, 0, 0.1525388, 0.41960785)
 
-[node name="MeleeAttack" type="Area2D" parent="." unique_id=913285382]
+[node name="Hurtbox" type="Area2D" parent="." unique_id=913285382]
 
-[node name="MeleeHitbox" type="CollisionShape2D" parent="MeleeAttack" unique_id=1818824070]
+[node name="MeleeHitbox" type="CollisionShape2D" parent="Hurtbox" unique_id=1818824070]
 position = Vector2(15.5, 0)
 shape = SubResource("RectangleShape2D_cvnsp")
 debug_color = Color(0.67114836, 0.50911283, 1.92523e-07, 0.41960785)

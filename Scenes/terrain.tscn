@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cxtc1cyaat7f1"]
+
+[ext_resource type="Texture2D" uid="uid://dgvwmpxt6vgng" path="res://Assets/Terrain_incomplete_test.png" id="1_g24sy"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_62tj5"]
+texture = ExtResource("1_g24sy")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_pmkc2"]
+sources/2 = SubResource("TileSetAtlasSource_62tj5")
+
+[node name="Terrain" type="Node2D" unique_id=322869963]
+
+[node name="TileMap" type="TileMapLayer" parent="." unique_id=1437803360]
+tile_set = SubResource("TileSet_pmkc2")
